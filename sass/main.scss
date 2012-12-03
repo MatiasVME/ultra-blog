@@ -5,12 +5,29 @@
 
 @import "normalize";
 @import "base-styles";
+@import "base";
+
+// Compass
+
+@import "compass/css3";
 
 /**
  *  Styles
  */
 
+#main-header {
+  overflow: hidden;
+}
 
+#main-nav {
+  float: rigth;
+
+  li {
+    @include inline-block;
+
+    
+  }
+}
 
 /**
  *  Other imports
@@ -18,3 +35,4 @@
 
 //@import "helper-classes";
 //@import "boilerplate-queries"
+@import "print";
