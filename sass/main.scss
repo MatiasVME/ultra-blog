@@ -15,18 +15,29 @@
  *  Styles
  */
 
+ ul {
+    color: $blody-rust;
+ }
+
 #main-header {
-  overflow: hidden;
-}
-
-#main-nav {
-  float: rigth;
-
-  li {
-    @include inline-block;
-
-    
+    overflow: hidden;
+    background-color: black;
   }
+
+  #main-nav {
+    float: rigth;
+
+    ul { padding: 0; }
+
+    li {
+        @include inline-block;
+
+        @media #{$break-small} {
+            width: 50%;
+            float: left;
+            text-align: center;
+        }
+    }
 }
 
 /**
@@ -34,5 +45,5 @@
  */
 
 //@import "helper-classes";
-//@import "boilerplate-queries"
+//@import "boilerplate-queries";
 @import "print";
