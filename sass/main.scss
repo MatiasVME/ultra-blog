@@ -15,27 +15,46 @@
  *  Styles
  */
 
- ul {
-    color: $blody-rust;
- }
-
 #main-header {
     overflow: hidden;
-    background-color: black;
-  }
+    background-color: lighten($black, 10%);
+    color: $mustard;
 
-  #main-nav {
+    > h1 {
+        text-shadow: 1px 1px 2px $skin;
+        text-align: center;
+
+        margin: {            
+            top: 5px;
+            bottom: 2px;
+        }
+
+        &:hover {
+            color: lighten($mustard, 10%);
+            text-shadow: 1px 1px 3px lighten($skin, 10%);
+        }
+    }
+}
+
+#main-nav {
     float: rigth;
+    overflow: hidden;
+    padding: 1%;
 
     ul { padding: 0; }
 
     li {
         @include inline-block;
 
-        @media #{$break-small} {
-            width: 50%;
-            float: left;
-            text-align: center;
+        text-shadow: 1px 1px 2px $skin;
+        font-weight: bold;
+
+        width: 50%;
+        float: left;
+        text-align: center;
+
+        &:hover {
+            background-color: lighten($black, 15%);
         }
     }
 }
